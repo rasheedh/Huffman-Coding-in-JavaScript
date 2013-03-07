@@ -39,23 +39,16 @@ function sorting(o){
         for (var i in o){
                 l.push(new tree(null,null,o[i]))
                 }
-                
-                //l=reverse()
                 console.log(l)
                 
         while (l.length>1){
                 f = l.pop()
                 s = l.pop()
-                
-                //console.log(f["data"][1])}
                 h = [f.data[0]+s.data[0],f.data[1]+s.data[1]]
-                //console.log(h)
                 l.push(new tree(f,s,h))
                 l.sort(function(c,d){return d.data[1]-c.data[1]})
                 }
-        //console.log(l)
         z = l.pop()
-        //console.log(z)
         return z
 
         }
@@ -83,14 +76,10 @@ function main(){
         d = encode(z,str[c])
         toString(d)
         res=res+d 
-        //console.log(str[c])
         }   
     console.log("Here is the encoded string",res)
         r=res
         q = decode(r,z)
     console.log ("Here is the decoded digit",q)
-    //console.log("value of z is")
-    //console.log(z)
-    //console.log(o)
         }
 main()
